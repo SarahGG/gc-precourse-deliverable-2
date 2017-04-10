@@ -93,16 +93,16 @@ public class Deliverable2{
 
         // Get two dates from the user, passing a prompt string as an argument
         // getUserNumber delivers the prompt, then translates the input to a date
-        Deliverable2.getUserNumber(firstDatePrompt);
-        Deliverable2.getUserNumber(secondDatePrompt);
+        getUserNumber(firstDatePrompt);
+        getUserNumber(secondDatePrompt);
 
         // Compares the users dates, and makes them chronological if they aren't already
-        Deliverable2.makeChronological();
+        makeChronological();
 
         // gets the difference between the two dates
         dateDiff = Period.between(userDates.get(0), userDates.get(1));
 
         // print out the difference between the dates in days, months, and years
-        System.out.printf("The time between these two dates is %d days, %d months, and %d years.", dateDiff.getDays(), dateDiff.getMonths(), dateDiff.getYears());
+        System.out.printf("The time between these two dates is %d days, %d months, and %d years.", Math.abs(dateDiff.getDays()), Math.abs(dateDiff.getMonths()), Math.abs(dateDiff.getYears()));
     }
 }
